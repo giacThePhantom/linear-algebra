@@ -1,0 +1,100 @@
+\chapter{Vector Spaces}
+\center{\emph{Linear algebra is the study of linear maps on finite-dimensional vector spaces}}
+A vector space is a set wit operations of addition and scalar multiplications that satisfy natural algebraic properties.
+
+\section{$\mathcal{R}^n$ and $\mathcal{C}^n$}
+  \subsection{Complex number}
+  Assume that there exists a square root of $-1$ called $i$, then:
+
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item A complex number is an ordered pair $(a,b)$ where $a,b\in\mathcal{R}$ written as $a+bi$.
+      \item The set of all complex number is $\mathcal{C} = \{a+bi | a,b\in\mathcal{R}\}$.
+      \item Addition and multiplications are defined on $\mathcal{C}$ as:
+        \begin{align*}
+          (a+bi) + (c+di) &= (a+c) + (b+d)i\\
+          (a+bi) \cdot (c+di) &= (ac - bd) + (ad+bc)i
+        \end{align*}
+    \end{itemize}
+  \end{multicols}
+
+  Complex addition and multiplication have the expected properties:
+
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item Commutativity: $\alpha+\beta = \beta+\alpha\land \alpha\cdot\beta=\beta\cdot\alpha\forall\alpha,\beta\in\mathcal{C}$.
+      \item Associativity: $(\alpha+\beta) + \lambda = \alpha + (\beta+\lambda)\land (\alpha\cdot\beta)\cdot\lambda=\alpha\cdot(\beta\cdot\lambda)\forall\alpha,\beta,\lambda\in\mathcal{C}$.
+      \item Identities: $\lambda + 0 = \lambda\land 1\cdot\lambda = \lambda\forall\lambda\in\mathcal{C}$.
+      \item Additive inverse: $\forall\alpha\in\mathcal{C},\exists\beta\in\mathcal{C}\Rightarrow \alpha+\beta = 0$.
+      \item Multiplicative inverse: $\forall\alpha\in\mathcal{C},\exists\beta\in\mathcal{C}\Rightarrow \alpha\cdot\beta = 1$.
+      \item Distributive property: $\lambda(\alpha+\beta) = \lambda\alpha + \lambda\beta\forall\alpha,\beta,\lambda\in\mathcal{C}$.
+    \end{itemize}
+  \end{multicols}
+
+  Which are proved by using the same properties on the real numbers.
+  Furthermore suppose $\alpha,\beta\in\mathcal{C}$, then:
+
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item $-\alpha$ the additive inverse of $\alpha$: $-\alpha$ is the unique complex number such that:
+        $$\alpha+(-\alpha) = 0$$
+      \item Subtraction is then defined as:
+        $$\beta - \alpha = \beta + (-\alpha)$$
+      \item For $\alpha\neq 0$, let $\frac{1}{\alpha}$ denote the multiplicative inverse of $\alpha$, a number such that:
+        $$\alpha\cdot\left(\frac{1}{\alpha}\right) = 1$$
+      \item For $\alpha\neq 0$ division by $\alpha$ is defined as:
+        $$\frac{\beta}{\alpha} = \beta\cdot\left(\frac{1}{\alpha}\right)$$
+    \end{itemize}
+  \end{multicols}
+
+  From now on definition and theorem can be proved on both real and complex numbers, adopting the notation where $\mathcal{F}$ stands for either $\mathcal{R}$ or $\mathcal{C}$.\\
+  Elements of $\mathcal{F}$ are called \emph{scalars}.
+  Furthermore $\forall\alpha\in\mathcal{F}\land m\in\mathcal{N}$, $\alpha^m$ is defined as:
+
+  $$\alpha^m = \underbrace{\alpha\cdots\alpha}_{m\text{ times}}$$
+
+  Which implies that:
+
+  $$(\alpha^m)^n = a^{m\cdot n}\qquad\land\qquad(\alpha\beta)^m = \alpha^m\beta^m$$
+
+  \subsection{Lists}
+  Suppose $n\in\mathcal{N}$, then a list of length $n$ is an ordered collection of $n$ elements.
+  Two lists are equal if and only if they have the same length and the same elements in the same order.
+  They are often noted $(z_1, \dots, z_n)$.
+  By definition a list has a finite length that is a non negative integer.
+  A list of length $0$ is $(\ )$.
+  They differ from set in the fact that order matters and repetitions are allowed.\\
+
+  Fixing $n$ for the rest of the chapter, $\mathcal{F}^n$ is the set of all lists of length $n$ of elements of $\mathcal{F}$:
+
+  $$\mathcal{F}^n = \{(x_1, \dots x_n) | x_k\in\mathcal{F}\forall k \in [1,n]\}$$
+
+  Where $x_k$ is the $k^{th}$ coordinate of $(x_1, \dots x_n)$.\\
+
+  Addition in $\mathcal{F}^n$ is defined by adding the corresponding coordinates:
+
+  $$(x_1,\dots, x_n) + (y_1, \dots, y_n) = (x_1 + y_1, \dots, x_n+y_n)$$
+
+  All of the same properties of addition hold.\\
+
+  Elements of $\mathcal{F}^n$, with $n > 1$ can be denoted as vectors with $\vec{x}$ for example.
+  Furthermore each of this set has a zero: $\vec{0}$.\\
+
+  For all $\vec{x}\in\mathcal{F}^n$, the additive inverse of $\vec{x}$, $-\vec{x}$, is the vector $-\vec{x}\in\mathcal{F}^n$ such that:
+
+  $$\vec{x} + (-\vec{x}) = \vec{0}$$
+
+  Thus if $\vec{x} = (x_1, \dots, x_n)$, then $-\vec{x} = (-x_1, \dots, -x_n)$.\\
+
+  Scalar multiplication in $\mathcal{F}^n$ is the product of a number $\lambda$ and a vector in $\mathcal{F}^n$.
+  it is computed by multiplying each coordinate of the vector by $\lambda$:
+
+  $$\lambda\vec{x} = \lambda(x_1,\dots, x_n) = (\lambda x_1, \dots, \lambda x_n)$$
+
+  Where $\lambda\in\mathcal{F}$ and $\vec{x}\in\mathcal{F}^n$.
+  From a geometric standpoint scalar multiplication shrinks or stretches the vector.
+
+  \subsection{Digression on fields}
+  A field is a set containing at least two distinct elements called $\vec{0}$ and $\vec{1}$, along with operations of addition and multiplication satisfying all the previously listed properties.
+  The only fields in this work are $\mathcal{R}$ and $\mathcal{C}$, but many of the definition and theorems that work for them work without change in arbitrary fields.
+  Except in the inner product chapters, results that have as a hypothesis that $\mathcal{F}$ is $\mathcal{C}$, the hypothesis can be replaced with the fact that $\mathcal{F}$ is an algebraically closed field: every nonconstant polynomial with coefficients in $\mathcal{F}$ has a zero.
