@@ -98,3 +98,69 @@ A vector space is a set wit operations of addition and scalar multiplications th
   A field is a set containing at least two distinct elements called $\vec{0}$ and $\vec{1}$, along with operations of addition and multiplication satisfying all the previously listed properties.
   The only fields in this work are $\mathcal{R}$ and $\mathcal{C}$, but many of the definition and theorems that work for them work without change in arbitrary fields.
   Except in the inner product chapters, results that have as a hypothesis that $\mathcal{F}$ is $\mathcal{C}$, the hypothesis can be replaced with the fact that $\mathcal{F}$ is an algebraically closed field: every nonconstant polynomial with coefficients in $\mathcal{F}$ has a zero.
+
+\section{Definition of vector space}
+A vector space is a set $V$ with an addition and a scalar multiplication on $V$ that satisfies the properties listed above.\\
+An addition on $V$ is a function that assigns an element $\vec{u}+\vec{v}\in V$ to each pair of elements $\vec{u}, \vec{v}\in V$.\\
+A scalar multiplication on a set $V$ is a function that assigns an element $\lambda\vec{v}\in V$ to each $\lambda\in\mathcal{F}\land\vec{v}\in V$.\\
+The formal definition: a vector space is a set $V$ along with an addition on $V$ and a scalar multiplication on $V$ such that the following properties hold:
+
+\begin{multicols}{2}
+  \begin{itemize}
+    \item\textbf{Commutativity}: $\vec{u}+\vec{v} = \vec{v}+\vec{u}\forall\vec{u},\vec{v}\in V$.
+    \item\textbf{Associativity}: $(\vec{u} + \vec{v} ) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})\land (ab)\vec{v} = a(b\vec{v})\forall \vec{u}, \vec{v},\vec{w}\in V\land \frall a,b\in\mathcal{F}$.
+    \item\textbf{Additive identity}: There exist an element $\vec{0}\in V$ such that $\vec{v} + \vec{0} = \vec{v}\forall\vec{v}\in V$.
+    \item\textbf{Additive inverse}: For every $\vec{v}\in V$, there exists $\vec{w}\in V$ such that $\vec{v}+\vec{w} = \vec{0}$.
+    \item\textbf{Multiplicative identity}: $1\vec{v} = \vec{v}\forall v\in V$.
+    \item\textbf{Distributive properties}: $a(\vec{u}+\vec{v}) = a\vec{u}+a\vec{v}\land(a+b)\vec{v} = a\vec{v} + b\vec{v}\forall a,b\in\mathcal{F}\land\vec{u},\vec{v}\in V$
+  \end{itemize}
+\end{multicols}
+
+Elements of a vector space are called vectors or points.
+The scalar multiplication depends on $\mathcal{F}$, so $V$ is a vector space over $\mathcal{F}$, they can be real or complex vector space.\\
+
+  \subsection{Unique additive identity}
+  A vector space has a unique additive identity.
+  Suppose $\vec{0}$ and $\vec{0}'$ are both additive identities for some vector space $V$, then:
+
+  $$\vec{0}' = \vec{0}'+ \vec{0} = \vec{0} + \vec{0}' = \vec{0}$$
+
+  Where this holds because $\vec{0}$ is an additive identity, the second from commutativity and the third because $\vec{0}'$ is an additive identity.
+  Thus $\vec{0}' = \vec{0}$ proving that $V$ has one additive identity.
+
+  \subsection{Unique additive inverse}
+  Every element in a vector space has a unique additive inverse.
+  Suppose $V$ is a vector space.
+  Let $\vec{v}\in V$.
+  Suppose $\vec{w}$ and $\vec{w}'$ are additive inverses of $\vec{v}$, then:
+
+  $$\vec{w} = \vec{w} + \vec{0} = \vec{w} + (\vec{v} + \vec{w}') = (\vec{w} + \vec{v}) + \vec{w} ' = \vec{0} = \vec{w}' = \vec{w}'$$
+
+  Thus $\vec{w} = \vec{w}'$ as desired.
+  For the rest of the book $V$ denotes a vector space over $\mathcal{F}$.
+
+  \subsection{The number $0$ times a vector}
+  $0\vec{v} = \vec{0}\forall \vec{v}\in V$.
+  For $\vec{v}\in V$:
+
+  $$0\vec{v} = (0+0)\vec{v} = 0\vec{v} + 0\vec{v}$$
+
+  Adding the additive inverse of $0\vec{v}$ to both sides of the equation above gives $0 = 0\vec{v}$ as desired.
+
+  \subsection{A number times the vector $\vec{0}$}
+  $a\vec{0} = \vec{0}\forall a\in\mathcal{F}$.
+  For $a\in\mathcal{F}$:
+
+  $$a\vec{0} = a(\vec{0} + \vec{0}) = a\vec{0} + a\vec{0}$$
+
+  Adding the additive inverse of $a\vec{0}$ to both sides of the equation above gives $\vec{0} = a\vec{0}$ as desied.
+
+  \subsection{The number $-1$ times a vector}
+  $(-1)\vec{v} = -\vec{v}\forall \vec{v}\in V$.
+  For $\vec{v}\in V$:
+
+  $$\vec{v} + (-1)\vec{v} = 1\vec{v} + (-1)\vec{v} = (1 + (-1))\vec{v} = 0\vec{v} = 0$$
+
+  This equation says that $(-1)\vec{v}$, when added to $\vec{v}$, gives $\vec{0}$, thus $(-1)\vec{v}$ is the additive inverse of $\vec{v}$ as desired.
+
+\section{Subspaces}
