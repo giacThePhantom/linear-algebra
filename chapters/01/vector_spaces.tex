@@ -1,5 +1,7 @@
 \chapter{Vector Spaces}
-\center{\emph{Linear algebra is the study of linear maps on finite-dimensional vector spaces}}
+\begin{center}
+  \emph{Linear algebra is the study of linear maps on finite-dimensional vector spaces}
+\end{center}
 A vector space is a set wit operations of addition and scalar multiplications that satisfy natural algebraic properties.
 
 \section{$\mathcal{R}^n$ and $\mathcal{C}^n$}
@@ -108,7 +110,7 @@ The formal definition: a vector space is a set $V$ along with an addition on $V$
 \begin{multicols}{2}
   \begin{itemize}
     \item\textbf{Commutativity}: $\vec{u}+\vec{v} = \vec{v}+\vec{u}\forall\vec{u},\vec{v}\in V$.
-    \item\textbf{Associativity}: $(\vec{u} + \vec{v} ) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})\land (ab)\vec{v} = a(b\vec{v})\forall \vec{u}, \vec{v},\vec{w}\in V\land \frall a,b\in\mathcal{F}$.
+    \item\textbf{Associativity}: $(\vec{u} + \vec{v} ) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})\land (ab)\vec{v} = a(b\vec{v})\forall \vec{u}, \vec{v},\vec{w}\in V\land \forall a,b\in\mathcal{F}$.
     \item\textbf{Additive identity}: There exist an element $\vec{0}\in V$ such that $\vec{v} + \vec{0} = \vec{v}\forall\vec{v}\in V$.
     \item\textbf{Additive inverse}: For every $\vec{v}\in V$, there exists $\vec{w}\in V$ such that $\vec{v}+\vec{w} = \vec{0}$.
     \item\textbf{Multiplicative identity}: $1\vec{v} = \vec{v}\forall v\in V$.
@@ -164,3 +166,79 @@ The scalar multiplication depends on $\mathcal{F}$, so $V$ is a vector space ove
   This equation says that $(-1)\vec{v}$, when added to $\vec{v}$, gives $\vec{0}$, thus $(-1)\vec{v}$ is the additive inverse of $\vec{v}$ as desired.
 
 \section{Subspaces}
+A subset $U$ of $V$ is called a subspace of $V$ if $U$ is also a vector space with the same additive identity, addition, and scalar multiplication as on $V$.\\
+A subset $U$ of $V$ is a subspace of $V$ if and only if $U$ satisfies the following:
+
+\begin{multicols}{2}
+  \begin{itemize}
+    \item \textbf{Additive identity}: $\vec{0}\in U$.
+    \item \textbf{Closed under addition}: $\vec{u},\vec{w}\in U\Rightarrow\vec{u}+\vec{w}\in U$.
+    \item \textbf{Closed under scalar  multiplication}: $a\in\mathcal{F} \land \vec{u}\in U\Rightarrow a\vec{u}\in U$.
+  \end{itemize}
+\end{multicols}
+
+  \subsection{Sum of subspaces}
+  Suppose $V_1, \dots, V_m$ are subspaces of $V$.
+  The sum of $V_1,\dots, V_m$, $V_1+\cdots+V_m$ is the set of all possible sum of elements of the subspaces:
+
+  $$V_1+\cdots+V_m = \{ (\vec{v}_1+\cdots + \vec{v}_m) : \vec{v}_1\in V_1, \dots \vec{v}_m\in V_m\}$$
+
+  Suppose $V_1,\dots, V_m$ are subspaces of $V$, then $V_1  + \cdots + V_m$ is the smallest subspace of $V$ containing $V_1, \dots, V_m$.\\
+  $V_1+\cdots +V_m$ contains $\vec{0}$ and is closed under addition and scalar multiplication (verify).
+  Then $V_1+\cdots+ V_m$ is a subspace of $V$.
+  The subspaces $V_1, \dots, V_m$ are contained in $V_1+\cdots+V_m$ and every subspace of $V$ containing $V_1,\dots,V_m$ contains $V_1+\cdots+V_m$ because subspaces must contain all finite sums of their elements.
+  Thus $V_1+\cdots+V_m$ is the smallest subspace of $V$ containing $V_1,\dots,V_m$
+
+  \subsection{Direct sums}
+  Suppose $V_1, \dots, V_m$ are subspaces of $V$.
+  Every element of $V_1+\cdots + V_m$ can be written as:
+
+  $$\vec{v}_1+\cdots+\vec{v}_m$$
+
+  Where $\vec{v}_k\in V_k$.
+  If each vector in the sum can be represented in the form above in only one way is a direct sum.\\
+  Suppose $V_1, \dots, V_m$ are subspaces of $V$:
+
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item The sum $V_1+\cdots +V_m$ is called a direct sum if each element of $V_1+\cdots +V_m$ can be written in only one way as a sum $\vec{v}_1+\cdots+\vec{v}_m$, where $\vec{v}_k\in V_k$.
+      \item If $V_1+\cdots +V_m$ is a direct sum then $V_1\oplus\cdots\oplus V_m$ denotes $V_1+\cdots +V_m$.
+    \end{itemize}
+  \end{multicols}
+
+  Suppose $V_1,\dots,V_m$ are subspaces of $V$.
+  Then $V_1+\cdots +V_m$ is a direct sum if and only if the only way to write $\vec{0}$ as a sum of $\vec{v}_1+\cdots+\vec{v}_m$, with $\vec{v}_k\in V_k$, is by taking $\vec{v}_k = \vec{0}$.\\
+  Suppose $V_1+\cdots + V_m$ is a direct sum: the only way to write $\vec{0}$ is as a sum $\vec{v}_1+\cdots+\vec{v}_m$ by taking each $\vec{v}_l = \vec{0}$.
+  The only way to write $\vec{0}$ as a sum $\vec{v}_1 + \cdots + \vec{v}_m$ is by taking $\vec{v}_k = \vec{0}$.
+  Now suppose that the only way to write $\vec{0}$ as a sum $\vec{v}_1+\cdots+\vec{v}_m$, where each $\vec{v}_k = \vec{0}$.
+  To show that $V_1+\cdots+V_m$ is a direct sum let $\vec{v} \in V_1+\cdots + V_m$:
+
+  $$\vec{v} = \vec{v}_1 + \cdots + \vec{v}_m$$
+
+  For some $\vec{v}_1\in V_1, \dots, \vec{v}_m\in V_m$.
+  Also  let $\vec{u} \in V_1+\cdots + V_m$:
+
+  $$\vec{v} = \vec{u}_1 + \cdots + \vec{u}_m$$
+
+  For some $\vec{u}_1\in V_1, \dots, \vec{u}_m\in V_m$.
+  Subtracting both:
+
+  $$\vec{0} = (\vec{v}_1 - \vec{u}_1) + \cdots + (\vec{v}_m - \vec{u}_m)$$
+
+  Because $\vec{v}_k - \vec{u}_k\in V_k\forall k\in[1,m]\Rightarrow \vec{v}_k-\vec{u}_k = \vec{0}\Rightarrow \vec{v}_k = \vec{u}_k\forall k$.\\
+  Suppose $U$ and $W$ subspaces of $V$, then:
+
+  $$U + W \text{ is a direct sum } \Leftrightarrow U\cap W = \{\vec{0}\}$$
+
+  Suppose that $U + W$ is a direct sum.
+  If $\vec{v}\in U\cap W$, then $\vec{0} = \vec{v} + (-\vec{v})$, where $\vec{v}\in U\land -\vec{v}\in W$.
+  By the unique representation of $\vec{0}$ as the sum of a vector in $U$ and in $W$, $\vec{v} = \vec{0}$, thus $U\cap W = \{\vec{0}\}$, completing the proof in one direction.
+  Now suppose that $U\cap W = \{\vec{0}\}$. TO prove that $U+W$ is a direct sum suppose $\vec{u}\in U\land \vec{w}\in W$:
+
+  $$\vec{0} + \vec{u} + \vec{w}$$
+
+  It remains to prove that $\vec{u} = \vec{w} = \vec{0}$.
+  The equation above implies that $\vec{u} = -\vec{w} ]in W$, thus $\vec{u}]in U\cap W$, hence $\vec{u} = \vec{0}$, which by the equation above implies that $\vec{w} = \vec{0}$.\\
+  This only in the case of two subspaces.\\
+  Sum of subspaces are analogous to unions of subsets.
+  Direct sums disjoint union of subsets, where disjointness is replaced with the requirement that intersection is $\{0\}$.

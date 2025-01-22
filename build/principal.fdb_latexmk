@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1737367389 "principal.tex" "build/principal.pdf" "principal" 1737367389 0
+["pdflatex"] 1737558060 "principal.tex" "build/principal.pdf" "principal" 1737558062 0
   "/opt/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1700514309 2971 def0b6c1f0b107b3b936def894055589 ""
   "/opt/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1700514309 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/opt/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1700514309 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -40,8 +40,10 @@
   "/opt/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1700514309 1120 8b7d695260f3cff42e636090a8002094 ""
   "/opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1700514309 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1700514309 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1700514309 36741 fa121aac0049305630cf160b86157ee4 ""
   "/opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1700514309 36281 c355509802a035cadc5f15869451dcee ""
   "/opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1700514309 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1700514309 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1700514309 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1700514309 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/opt/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1700514309 32716 08e384dc442464e7285e891af9f45947 ""
@@ -173,12 +175,12 @@
   "/opt/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1700514309 4694855 da3c2f62dc013c9c335327a3e43c1486 ""
   "/opt/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1700514309 8213874 7fc892b6ebfa6e1f7e79f7e87913c3ce ""
   "/opt/texlive/2023/texmf.cnf" 1700514309 585 cbdac2c540e67e6925735bc924caa885 ""
-  "build/principal.aux" 1737367389 1015 74f5765ce60a6df898a685b0b7a755ce "pdflatex"
-  "build/principal.out" 1737367389 603 577ecedb75aca02abb09a7dd5bd68064 "pdflatex"
-  "build/principal.toc" 1737367389 445 2fd9e3d15719bd36ef3cd6b35590a133 "pdflatex"
-  "chapters/01/vector_spaces.tex" 1737367364 5550 3aae455922be8832181ee7987e102059 ""
-  "prefix.tex" 1737367274 1725 39eab98cb63548f2a2f0aedbda43a399 ""
-  "principal.tex" 1737367376 416 cc886b4dee46ae1b4802c1456ddf1279 ""
+  "build/principal.aux" 1737558061 2200 a964069f318c85e61b9a175c1ecbee30 "pdflatex"
+  "build/principal.out" 1737558061 2168 2b9a06ca7f260952b6d366b1daa2ae0e "pdflatex"
+  "build/principal.toc" 1737558061 1259 c3db770f7c8c1d77f1b31fafab7f9269 "pdflatex"
+  "chapters/01/vector_spaces.tex" 1737558058 13659 c790cc7beee5fa977795e3ec89d9236e ""
+  "prefix.tex" 1737557969 1726 67cd1fb072e298dd50a46107729eac13 ""
+  "principal.tex" 1737558029 396 88a1a0232263821777866338ffa618ed ""
   (generated)
   "build/principal.aux"
   "build/principal.log"
